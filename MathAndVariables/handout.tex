@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{listings}
+\usepackage{csquotes}
+\title{Robotics Club Basics}
+\begin{document}
+\section{Startup}
+\begin{enumerate}
+	\item First start Python3 (32bit)
+    \item Open Sublime Text 3
+    \item Now in the interpreter type these commands
+    \begin{enumerate}
+    	\item import robuts
+        \item from robuts import *
+        \item from importlib import reload
+        \item changedir("learn")
+   \end{enumerate}
+
+   \item Then in Sublime Text 3 start a new file by double clicking the dark space above the typing area
+   \item Then save the file in your Document/Code/Learn folder as filename.py
+   \item To run a file FOR THE FIRST TIME type
+  \begin{enumerate}
+      \item import filename
+      \item There should be NO .py when importing
+   \end{enumerate}
+   \item If you've already imported a file then to reimport it use
+   \begin{enumerate}
+		\item reload(filename)
+   \end{enumerate}
+\end{enumerate}	
+
+\section{Printing, Variables, and Mathematics OH MY!}
+\subsection{Mathematics \& Printing}
+\subsubsection{Basics}
+First start by creating a newfile called ex1.py
+Then to Solve the Otter problem we'll be using the remainder function \%. 
+For example:
+\begin{lstlisting}[language=Python]
+n % m
+\end{lstlisting}
+This says give me the remainder of \verb|n//m|. So:
+\begin{lstlisting}[language=Python]
+>>> 12 // 2
+6
+>>> 12 % 2
+0
+>>> 17 // 2
+6
+>>> 17 % 2
+1
+\end{lstlisting}
+If you were to put \verb|n//m| you would see like above.
+If were to import or reload NOTHING would appear in the interpreter. 
+Why?
+This is because you did TELL python to put TELL the user something has 
+happened.
+The only way python can tell the user what's happening is with the \verb|print| 
+function. 
+So if you have:
+\begin{lstlisting}[language=Python]
+print("Here is some data fam")
+print("17 % 2 = {}".format(17 % 2))
+\end{lstlisting}
+In the case above the \verb|.format(thing)| says "Please replace the \{\} in '17 \% 2 
+= \{\}' with the math answer to \verb|17 % 2|.
+
+So when you import a file containing the code above this will happen:
+\begin{lstlisting}[language=Python]
+>>> import ex1
+Here is some data fam
+17 % 2 = 1
+>>>
+\end{lstlisting}
+Try it! 
+Otherwise let's move onto some actual math problems
+
+\subsubsection{Application}
+So now we've moved onto actually using this information for good, possibly evil, purposes? 
+That seems just . . . dandy? Fine? Meow? 
+Anyways I'll present a story problem for you:
+\begin{displayquote}
+Once upon a time there was a baker named Geo and had two parties who requested slabs o' 
+sweets otherwise known as SLOS.
+He knew that he only had 157 SLOS available and knew that the Ruby Roses demanded 
+two SLOS for every member (a total of 27). 
+The Sad Sapphire want to divide the remaining sweets evenly among themselves with 
+no leftovers (there are 11 of them).
+All leftovers are kept by the baker.
+How many total go to each party?
+\end{displayquote}
+First we want to start off by making another file called prob1.py
+Start off by storing ALL of the needed numbers into variables like so
+\begin{lstlisting}[language=Python]
+total_sweets = 157
+rubies = 27
+sweets_per_member = 2
+\end{lstlisting}
+
+Then the next step is for us to do some math AND STORE IT AS A VARIABLE
+\begin{lstlisting}[language=Python]
+rubies_total = rubies * sweets_per_member
+saph_total = (total_sweets - rubies_total) // 11
+leftovers = (total_sweets - rubies_total) % 11
+\end{lstlisting}
+Remember that the \% lets of return the remainder and the \verb|//| lets us divide and round 
+down so we won't have a decimal. 
+Now all we have to do is PRINT the answer like so 
+\begin{lstlisting}[language=Python]
+print("The Rubies get {} SLOS".format(rubies_total))
+print("The Sapphires get {} SLOS".format(saph_total))
+print("The baker keeps {} SLOS for himself".format(leftovers))
+\end{lstlisting}
+
+Now import this file and you should see that all the print statements work and display 
+the information in an IMPORTANT and MEANINGFUL MANNER
+I recommend that you change around the numbers and also change the variables names. 
+Maybe try changing the print statements and see what happens.  
+\end{document}
+

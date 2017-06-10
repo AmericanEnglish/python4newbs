@@ -73,3 +73,34 @@ welcoming to new people. I personally used it for the first few years of undergr
     * Some [cheat sheet](https://www.fprintf.net/vimCheatSheet.html) notes
     * You'll probably want to expand the functionality using [Vundle](https://github.com/VundleVim/Vundle.vim)
     * Also some [plugins](http://vimawesome.com/)!
+3. [Atom](https://atom.io/)
+    * This editor is by the GitHub people. I'm told its great. That's about all I know.
+
+### Python 3
+
+Simply run the installer found [here](https://www.python.org/download/releases/3.0/). Make sure that you add it to your path! It's a little checkbox that can make your life a lot easier.
+
+### A willingness to learn
+
+Speaks for itself
+
+### Minor amounts of command line experience
+
+This is something that comes with time. I'd mainly make sure that you know the following:
+
+Change directories
+```
+Powershell & CMD & BASH
+> cd directory_name
+```
+
+List contents of a folder/directory
+```
+CMD & Powershell
+> dir
+Powershell
+> ls
+BASH
+$ ls
+```
+
